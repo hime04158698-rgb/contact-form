@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== modal ===== */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.4);
+  align-items: center;
+  justify-content: center;
+}
+.modal.is-open { display: flex; }
+
+.modal_content{
+  background:#fff;
+  padding:16px;
+  border-radius:8px;
+  min-width: 240px;
+}

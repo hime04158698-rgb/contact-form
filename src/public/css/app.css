@@ -1,0 +1,70 @@
+/* 最低限：ページ全体 */
+body { font-family: sans-serif; }
+
+/* モーダル（今のHTML/JSの class/id 前提） */
+.modal { display:none; position:fixed; inset:0; background:rgba(0,0,0,.4); align-items:center; justify-content:center; }
+.modal.is-open { display:flex; }
+.modal__content { background:#fff; padding:16px; border-radius:8px; min-width:240px; }
+
+/* ページネーション矢印が巨大になるのを止める（SVG対策） */
+svg { max-width: 24px; max-height: 24px; }
+
+/* 余白と幅 */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+h1,h2 { margin: 0 0 16px; }
+
+/* 検索フォームを横並びに */
+.search-form {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.search-form input,
+.search-form select {
+  padding: 6px 8px;
+}
+
+/* テーブルを見やすく */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+  vertical-align: top;
+}
+
+th { background: #f5f5f5; }
+
+/* ページネーション（数字の並び） */
+.pagination {
+  display: flex;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0;
+}
+
+.pagination li a,
+.pagination li span {
+  display: inline-block;
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  text-decoration: none;
+}
+
+.pagination .active span {
+  background: #eee;
+}
